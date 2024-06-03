@@ -60,16 +60,7 @@
 
 
 
-
-
-##### Установите ваш API token в main.py или в виртуальное окружение:
-
-```bash
-export HAMSTER_API_KEY='api_key'
-```
-
-
-
+##### Установите ваш API token в config.py
 
 
 ##### Установка нужных модулей:
