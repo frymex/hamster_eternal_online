@@ -129,3 +129,10 @@ class Hamster(BasicApi):
                 return error_response
             except ValidationError:
                 return {'error': response.text}
+
+    def is_connected(self) -> Optional[Union[dict, ResponseGetMe]]:
+        me = self.get_me()
+        if isinstance(me, dict):
+            return False
+        else:
+            return me
