@@ -47,7 +47,7 @@ class Friend(BaseModel):
 
 
 class Referral(BaseModel):
-    friend: Friend
+    friend: Optional[Friend] = None
 
 
 class ClickerUser(BaseModel):
@@ -69,7 +69,8 @@ class ClickerUser(BaseModel):
     earnPassivePerHour: int
     lastPassiveEarn: float
     tapsRecoverPerSec: int
-    referral: Referral
+
+    referral: Optional[Referral] = None
 
 
 class ClickerUserWrapper(BaseModel):
