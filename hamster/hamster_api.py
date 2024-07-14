@@ -48,12 +48,11 @@ class BasicApi:
 
 
 class Hamster(BasicApi):
-    __basic_url__ = 'https://api.hamsterkombat.io/'
+    __basic_url__ = 'https://api.hamsterkombatgame.io/'
 
     def __init__(self, *, auth_key: str):
         super().__init__()
         self.add_bearer(auth_key)
-
 
     def list_tasks(self) -> Optional[Union[dict, TaskList]]:
         response = self.make_request('clicker/list-tasks', 'POST')
@@ -116,6 +115,19 @@ class Hamster(BasicApi):
             return {
                 'error': response.text
             }
+
+    def buy_upgarde(self, upgrade_id: str) -> Optional[Union[dict, ErrorResponse]]:
+        timestamp = int(time.time())
+        response = self.make_request('clicker/buy-upgrade', 'POST',
+                                     json={'upgradeId': upgrade_id, 'timestamp': timestamp})
+        if response.ok:
+            return response.json()  # only dict
+        else:
+            try:
+                error_response = ErrorResponse.model_validate(response.json())
+                return error_response
+            except ValidationError:
+                return {'error': response.text}
 
     def buy_boost(self, boost_id: BoostId) -> Optional[Union[dict, ResponseModelBuyBoost, ErrorResponse]]:
         timestamp = int(time.time())
