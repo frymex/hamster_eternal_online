@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+
+config.py
+
 # Distribution / packaging
 .Python
 build/
@@ -165,7 +168,5 @@ cython_debug/
 test.*
 *.session
 *.session-journal
-
-config.py
 
 *.jar

@@ -45,9 +45,6 @@
 Активируем его `(.\ .venv\Scripts\activate.bat`)
 
 Активируем конфиг: переменуйте *config.py.example* в *config.py*
-редактируйте свой API токен и интервал в *config.py*
-
-
 
 
 ##### Инструкция для Ubuntu:
@@ -61,13 +58,8 @@
 активируем его (`source .venv/bin/activate`)
 
 активируем конфиг: `cp config.py.example config.py`
-редактируйте свой API токен и интервал в config.py
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> bc49ec16ef30128114cf4e4b5f3e2ef51493a230
 ##### Установите ваш API token в config.py
 
 

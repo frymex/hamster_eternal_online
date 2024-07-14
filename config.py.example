@@ -3,3 +3,4 @@ auth_key = 'API_KEY'  # Your API Key
 
 # Please! Rename a file to "config.py". Otherwise, it'd not be working.
 # Пожалуйста! Переименуйте файл в "config.py". Иначе, он не будет работать.
+
