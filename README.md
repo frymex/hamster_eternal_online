@@ -40,10 +40,12 @@
 
 
 
-создаем виртуальное окружение python (`python -m venv .venv`)
+Создаем виртуальное окружение python (`python -m venv .venv`)
 
-активируем его `(.\ .venv\Scripts\activate.bat`)
+Активируем его `(.\ .venv\Scripts\activate.bat`)
 
+Активируем конфиг: переменуйте *config.py.example* в *config.py*
+редактируйте свой API токен и интервал в *config.py*
 
 
 
@@ -57,6 +59,9 @@
 создаем виртуальное окружение python (`python3 -m venv .venv`)
 
 активируем его (`source .venv/bin/activate`)
+
+активируем конфиг: `cp config.py.example config.py`
+редактируйте свой API токен и интервал в config.py
 
 
 
